@@ -1,6 +1,6 @@
 {
-  "name": "dociql",
-  "version": "1.0.3",
+  "name": "@unchainedshop/dociql",
+  "version": "1.0.0",
   "description": "Generate beautiful static API documentation from GraphQL Schema",
   "preferGlobal": true,
   "bin": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wayfair/dociql.git"
+    "url": "git+https://github.com/unchainedshop/dociql.git"
   },
   "engines": {
     "node": ">=8"
@@ -73,5 +73,10 @@
     "codecov": "^3.6.1",
     "mocha": "^5.2.0",
     "nyc": "^14.1.1"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
   }
 }
