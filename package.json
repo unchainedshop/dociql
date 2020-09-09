@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Generate beautiful static API documentation from GraphQL Schema",
   "preferGlobal": true,
+  "private": false,
   "bin": {
     "dociql": "bin/dociql.js"
   },
@@ -78,10 +79,7 @@
   "directories": {
     "doc": "docs",
     "test": "test"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "private": false
+  }
+  
 
 }
