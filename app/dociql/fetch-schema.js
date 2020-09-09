@@ -13,13 +13,16 @@ module.exports = function (graphUrl) {
         json: requestBody
     }).getBody('utf8');
 
-    const introspectionResponse = JSON.parse(responseBody);    
-
+    const introspectionResponse = JSON.parse(responseBody);
+    const mutations = introspectionResponse.data.__schema.types.filter(a => a.name === 'Mutation')[0];
+    const queries = introspectionResponse.data.__schema.types.filter(a => a.name === 'Query')[0];
     const jsonSchema = converter.fromIntrospectionQuery(introspectionResponse.data);
-    const graphQLSchema = graphql.buildClientSchema(introspectionResponse.data, { assumeValid: true});
+    const graphQLSchema = graphql.buildClientSchema(introspectionResponse.data, { assumeValid: true });
 
     return {
         jsonSchema,
-        graphQLSchema
+        graphQLSchema,
+        queries,
+        mutations
     }
 }
