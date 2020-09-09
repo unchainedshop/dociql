@@ -78,5 +78,10 @@
   "directories": {
     "doc": "docs",
     "test": "test"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false
+
 }
